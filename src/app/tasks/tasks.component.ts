@@ -1,20 +1,21 @@
 import { Component } from '@angular/core';
-import { RouterLink, RouterOutlet } from '@angular/router';
-import { ActionbtnComponent } from './components/actionbtn/actionbtn.component';
-import Tasks from './tasks';
-import { TaskService } from './services/task.service';
-import { TaskType } from './declearedtypes/task';
+import { RouterOutlet } from '@angular/router';
+import { ActionbtnComponent } from '../components/actionbtn/actionbtn.component';
+import Tasks from '../tasks';
+import { TaskService } from '../services/task.service';
+import { TaskType } from '../declearedtypes/task';
 import { CommonModule } from '@angular/common';
-import { TaskItemComponent } from './components/task-item/task-item.component';
-@Component({
-  selector: 'app-root',
-  standalone: true,
-  imports: [RouterOutlet, ActionbtnComponent, TaskItemComponent, CommonModule, RouterLink],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
-})
+import { TaskItemComponent } from '../components/task-item/task-item.component';
 
-export class AppComponent {
+@Component({
+  selector: 'app-tasks',
+  standalone: true,
+  imports: [ActionbtnComponent, TaskItemComponent, CommonModule],
+  templateUrl: './tasks.component.html',
+  styleUrl: './tasks.component.css'
+})
+export class TasksComponent {
+
   title = 'task-tracker';
   tasks: TaskType[] = [];
 

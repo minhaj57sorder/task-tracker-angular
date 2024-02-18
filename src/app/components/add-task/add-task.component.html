@@ -1,0 +1,18 @@
+<p>add-task works!</p>
+<form>
+    <!-- Form fields go here -->
+    <form (ngSubmit)="onSubmit()">
+        <div>
+            <label for="taskText">Task Text:{{taskText}}</label>
+            <input type="text" id="taskText" [(ngModel)]="taskText" name="taskText">
+        </div>
+        <div>
+            <label for="taskDate">Task Date:{{taskDate}}</label>
+            <input type="date" id="taskDate" [(ngModel)]="taskDate" name="taskDate">
+        </div>
+        <div>
+            <label for="taskReminder">Set Reminder:{{taskReminder}}</label>
+            <input type="checkbox" id="taskReminder" [(ngModel)]="taskReminder" name="taskReminder">
+        </div>
+        <button type="submit">Add Task</button>
+    </form>

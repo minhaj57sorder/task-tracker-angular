@@ -1,0 +1,10 @@
+<div>
+    @for (item of tasks; track item.id) {
+    <app-task-item [task]="item" (onDeleteTask)="onDeleteTask($event)"
+    (onToggleReminder)="onToggleTaskReminder($event)"
+    ></app-task-item>
+    }
+  </div>
+  <!-- <div *ngFor="let item of tasks">
+    <app-task-item [task]="item"></app-task-item>
+  </div> -->

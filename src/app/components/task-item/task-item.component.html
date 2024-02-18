@@ -1,0 +1,6 @@
+<div [classList]="[task.reminder?'reminder':'']">
+    <p>{{task.text}}</p>
+    <p>{{task.day}}</p>
+    <button class="btn btn-danger" (click)="onDelete(task)">Delete</button>
+    <button class="btn btn-danger" (click)="onToggle(task)">Toggle</button>
+</div>
